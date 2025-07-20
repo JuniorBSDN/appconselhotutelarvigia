@@ -32,22 +32,40 @@
 </head>
 <body class="font-sans bg-gray-50">
     <!-- Header/Navigation -->
-    <header class="bg-white shadow-md">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <img src="https://art.pixilart.com/sr29f084cb0bbaws3.png", alt="Logo" class="w-120 h-120" >
-            </div>
-            <nav class="hidden md:flex space-x-8">
-                <a href="#home" class="text-blue-600 font-medium">Início</a>
-                <a href="#about" class="text-gray-600 hover:text-blue-600">Sobre</a>
-                <a href="#services" class="text-gray-600 hover:text-blue-600">Serviços</a>
-                <a href="#report" class="text-gray-600 hover:text-blue-600">Denúncias</a>
-                <a href="#support" class="text-gray-600 hover:text-blue-600">Apoio Legal</a>
-                <a href="#contact" class="text-gray-600 hover:text-blue-600">Contato</a>
+<header class="gradient-bg text-white">
+        <div class="container mx-auto px-6 py-12">
+            <nav class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-laptop-code text-3xl"></i>
+                    <span class="text-2xl font-bold">BACK INFORMATICA</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#servicos" class="hover:text-blue-200 transition">Serviços</a>
+                    <a href="#sobre" class="hover:text-blue-200 transition">Sobre Nós</a>
+                    <a href="#contato" class="hover:text-blue-200 transition">Contato</a>
+                </div>
+                <button class="md:hidden">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
             </nav>
-            <button class="md:hidden text-gray-600">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
+
+            <!-- Hero Section -->
+            <div class="mt-20 md:mt-32 flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+                        Soluções Tecnológicas <br> para o seu Negócio
+                    </h1>
+                    <p class="text-xl mb-8 text-blue-100">
+                        Assistência técnica especializada, atendimento field, suporte remoto e desenvolvimento de software sob medida.
+                    </p>
+                    <button id="messageBtn" class="message-btn bg-white text-blue-600 font-bold py-3 px-8 rounded-full hover:bg-blue-50">
+                        Enviar Mensagem
+                    </button>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3271/3271597.png" alt="Tecnologia" class="w-64 md:w-80 floating">
+                </div>
+            </div>
         </div>
     </header>
 
