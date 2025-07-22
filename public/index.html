@@ -32,13 +32,13 @@
 </head>
 <body class="font-sans bg-gray-50">
 
-    
+
     <!-- Report Section -->
     <section id="report" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Solicitar atendimento</h2>
             <div class="max-w-3xl mx-auto bg-blue-50 rounded-xl shadow-md overflow-hidden p-6">
-                
+
                 <div class="mb-6">
                     <h3 class="text-xl font-semibold text-gray-800 mb-3">Como solicitar atendimento?</h3>
                     <p class="text-gray-600 mb-4">Você pode estar preenchendo o formulario de suporte técnico abaixo e faremos contato em menos de 2hs</p>
@@ -53,16 +53,16 @@
                         <label for="reportType" class="block text-sm font-medium text-gray-700 mb-1">Tipo de Atendimento*</label>
                         <select id="reportType" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" required>
                             <option value="" disabled selected>Selecione o tipo de atendimento</option>
-                            <option value="abuso">Assistência Técnica</option>
-                            <option value="negligencia">Atendimento Field</option>
-                            <option value="trabalho">Assistência técnica Remota</option>
-                            <option value="trabalho">Análise e desenvolvimento</option>            
+                            <option value="Assistencia Tecnica">Assistência Técnica</option>
+                            <option value="Atendimento Field">Atendimento Field</option>
+                            <option value="Assistencia Tecnica Remota">Assistência técnica Remota</option>
+                            <option value="Analise e desenvolvimento">Análise e desenvolvimento</option>
                         </select>
                     </div>
 
                     <div>
-                        <label for="victimInfo" class="block text-sm font-medium text-gray-700 mb-1">Equipamento</label>
-                        <textarea id="victimInfo" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" placeholder="Informe o tipo do sistema computacional" required></textarea>
+                        <label for="equipamento" class="block text-sm font-medium text-gray-700 mb-1">Equipamento</label>
+                        <textarea id="equipamento" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" placeholder="Informe o tipo do sistema computacional" required></textarea>
                     </div>
 
                     <div>
@@ -71,8 +71,8 @@
                     </div>
 
                     <div>
-                        <label for="location" class="block text-sm font-medium text-gray-700 mb-1">Marca</label>
-                        <input type="text" id="location" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" placeholder="Marca do Equipamento" required>
+                        <label for="marca" class="block text-sm font-medium text-gray-700 mb-1">Marca</label>
+                        <input type="text" id="marca" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" placeholder="Marca do Equipamento" required>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -93,18 +93,19 @@
                     </div>
                 </form>
             </div>
+            </div>
     </section>
 
-   
+
  <script>
  document.querySelector("#reportForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
   const dados = {
     tipo: document.querySelector("#reportType").value.trim(),
-    vitima: document.querySelector("#victimInfo").value.trim(),
+    equipamento: document.querySelector("#equipamento").value.trim(),
     incidente: document.querySelector("#incidentDetails").value.trim(),
-    local: document.querySelector("#location").value.trim(),
+    marca: document.querySelector("#marca").value.trim(),
     nome: document.querySelector("#reporterName").value.trim(),
     contato: document.querySelector("#reporterContact").value.trim(),
   };
