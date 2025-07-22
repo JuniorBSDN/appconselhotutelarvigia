@@ -30,7 +30,7 @@ colecao = 'dbdenuncia'
 def enviar_email_denuncia(dados_denuncia):
     sender_email = os.environ.get("EMAIL_USER")
     sender_password = os.environ.get("EMAIL_PASS")
-    receiver_email = os.environ.get("EMAIL_RECEIVER")
+    receiver_email = os.environ.get("EMAIL_RECEIVER") 
 
     if not all([sender_email, sender_password, receiver_email]):
         print("❌ Variáveis de ambiente de e-mail não definidas (EMAIL_USER, EMAIL_PASS, EMAIL_RECEIVER).")
@@ -48,7 +48,9 @@ def enviar_email_denuncia(dados_denuncia):
     --------------------
     """
     for key, value in dados_denuncia.items():
-        if key == 'dataEnvio' and isinstance(value, firestore.SERVER_TIMESTAMP):
+        # A correção está aqui: firestore.SERVER_TIMESTAMP é um valor, não um tipo.
+        # Deve-se comparar com '==' em vez de usar isinstance().
+        if key == 'dataEnvio' and value == firestore.SERVER_TIMESTAMP:
             body += f"{key}: (Definido pelo Servidor Firestore)\n"
         else:
             body += f"{key}: {value}\n"
